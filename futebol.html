@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha() {
+		document.write("<br><hr><br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var vitorias = parseInt(prompt("Informe o número de vitórias"));
+	var empates = parseInt(prompt("Informe o número de empates"));
+	var pontos = vitorias * 3 + empates; 
+
+	//O java script define as entradas do prompt automaticamente para texto, mas ao multiplicar por um número ele converte automaticamente.Uma boa prática é converter os inputs do teclado para número antes de realizar as operações.
+
+	mostra("O número de pontos de seu time é: " + pontos);
+
+	if(pontos > 28) {
+		mostra("Seu time está melhor que o ano passado.");
+	}
+
+	if(pontos < 28) {
+		mostra("Seu time está pior que o anos passado.");
+	}
+
+	if(pontos == 28) {
+		mostra("Seu times está igual ao ano passado.");
+	}
+
+	mostra("Fim.")
+
+</script>

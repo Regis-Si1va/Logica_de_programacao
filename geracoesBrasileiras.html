@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<h1>Total de gerações brasileiras</h1>
+<script>
+	var media = 28;
+	var periodotempo = 2022 - 1500
+	var totalGeracoes = periodotempo / media
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	mostra("Em média uma geração ocorre a cada " + media + " anos.");
+	mostra("O total de gerações desde 1500 é " + Math.round(totalGeracoes) + " gerações.");
+
+</script>
+	

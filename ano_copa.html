@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>Anos em que ocorreram copas do mundo desde 1960</h1>
+
+<script>
+	function pulaLinha() {
+
+		document.write("<br><hr><br>");
+	}
+
+	function mostra(texto) {
+
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var anoCopa = 1960;
+
+	while(anoCopa <= 2022) {
+		mostra("<big>Teve copa em </big>" + anoCopa);
+		anoCopa = anoCopa + 4;
+	}
+
+	mostra("Fim.")
+
+</script>
+
