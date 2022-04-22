@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com a resposta</button>
+
+<script>
+
+	function sorteia(n) {
+
+		return n.push(Math.round(Math.random() * 10));
+	}
+
+	function sorteiaNumero(Quantidade) {
+
+		var respostas = [];
+
+		numero = 1;
+
+		while(numero <= respostas) {
+
+			sorteia(respostas);
+			numero++;
+		}
+
+		return respostas;
+
+	}
+
+	var respostas = sorteiaNumero(3);
+		console.log(respostas); // exibe o valor de resposta no console
+
+	
+
+	var input = document.querySelector("input");
+		input.focus(); // deixa a caixa de input com foco
+
+	function compara() {
+
+		var acertou = false;
+
+		// O argumento .length permite saber o tamanho do array
+		for(var posicao = 0; posicao < respostas.length; posicao++) {
+
+			if(input.value == respostas[posicao]) {
+
+				alert("Você ACERTOU!!!");
+				acertou = true;
+				break;
+			}
+		}
+
+		if(acertou == false) {
+
+			alert("Você ERROU!!!");
+		}
+
+		input.value = "";
+		input.focus(); // devolve o foco a caixa de input
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = compara;
+
+</script>
